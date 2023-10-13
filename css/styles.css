@@ -36,9 +36,11 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container {
-  max-width: 288px;
-  margin: 0 auto;
-  padding: 0 16px 0 16px;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header-container {
   display: flex;
@@ -117,37 +119,48 @@ img {
   color: #404bbf;
 }
 .main-section {
-  padding: 188px 0;
+  padding: 72px 0;
   background-color: var(--NAVY-BLUE, #2e2f42);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/back/people-office.jpg);
+    url(../images/back/Dark-bg-min.jpg);
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 320px;
   margin: 0 auto;
 }
-
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi), 
+  (min-resolution: 2dppx) {
+  .main-section{
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/back/Dark-bg-min-2x.jpg);
+      
+  }}
 
 
 h1 {
-  max-width: 496px;
+  max-width: 288px;
   display: block;
   margin: 0 auto;
 }
 
 .main-title {
-  color: var(--WHITE, #fff);
-  text-align: center;
-  font-size: 56px;
+  color: var(--WHITE, #FFF);
+  text-align: center; 
+    font-size: 36px;  
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  margin-bottom: 48px;
+  text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
 
@@ -199,6 +212,7 @@ h1 {
 }
 .advantages-meny-item {
   width: 100%;
+  min-width: 288px;
 }
 .div-advantages-icon {
   display: none;
@@ -684,19 +698,49 @@ margin-right: 8px;
     fill: #F4F4FD;;
   
   }
-  @media screen and (min-width: 320px){
-    .container {
-      max-width: 320px;
       
-      padding: 0 16px 0 16px;
-    }}
-    
-    
   
   @media screen and (min-width: 768px){
     .container {
       max-width: 768px;     
-      padding: 0 16px 0 16px;
+      
+    }
+    .main-section {
+      padding: 112px 0;
+      background-color: var(--NAVY-BLUE, #2e2f42);
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/back/Dark-bg-pl.jpg);
+    
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx){
+      .main-section{
+        background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/back/Dark-bg-pl-2x.jpg);
+          
+      }}
+    h1 {
+      max-width: 496px;
+      display: block;
+      margin: 0 auto;
+    }
+    .main-title {
+            font-size: 56px;
+            line-height: 1.07;
+            margin-bottom: 36px;
+            text-transform: none;
     }
     .section {     
       padding-top: 73px;
@@ -706,6 +750,7 @@ margin-right: 8px;
     }
     .advantages-meny-item{
       width: calc((100% - 24px) / 2);
+      min-width: 364px;
     }
     .main-item{  
       text-align: left;  
@@ -728,20 +773,51 @@ margin-right: 8px;
     
   @media screen and (min-width: 1158px){
     .container {
-      max-width: 1158px;
-  margin: 0 auto;
+      max-width: 1158px; 
   padding: 0 15px 0 15px;
 
     }
+    .main-section {
+      padding: 188px 0;
+      background-color: var(--NAVY-BLUE, #2e2f42);
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/back/people-office.jpg);
+    
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx){
+      .main-section{
+        background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/back/people-office-2x.jpg);
+          
+      }}
+    .main-title {
+            margin-bottom: 48px;
+     
+}
     .section {
       padding: 120px 0;
      
     } 
     .advantages-meny{
       gap: 24px;
+      flex-wrap: nowrap;
     }
     .advantages-meny-item{
       width: calc((100% - 72px) / 4);
+      min-width: 264px;
     }
     .div-advantages-icon {
       display: flex;
@@ -768,4 +844,4 @@ margin-right: 8px;
               column-gap: 24px;
               row-gap: 48px;
             }}
-  }
+  
