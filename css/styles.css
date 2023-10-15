@@ -70,7 +70,7 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  display: flex;
+  display: none;
   gap: 40px;
 }
 
@@ -100,7 +100,7 @@ img {
   font-style: normal;
 }
 .address-menu {
-  display: flex;
+  display: none;
   gap: 40px;
   padding: 24px 0;
   margin-left: 332px;
@@ -117,6 +117,67 @@ img {
 .address-link:hover,
 .address-link:focus {
   color: #404bbf;
+}
+.menu-open-btn{
+cursor: pointer;
+border: none;
+background-color: var(--WHITE, #FFF);
+margin-left: auto;
+}
+.mob-menu{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0; 
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 24px 24px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+}
+.mob-menu-close{
+color: var(--NAVY-BLUE, #2E2F42);
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;}
+
+.mob-studio{
+color: var(--OCEAN, #404BBF);
+}
+
+.mob-menu-item{
+  margin-top: 24px;
+  margin-bottom: 40px;  
+}
+.mob-address{  margin-top: auto;}
+
+.mob-address-menu{
+color: var(--SLATE, #434455);
+  font-size: 20px;
+      font-weight: 500;
+    line-height: 1.2;  
+    letter-spacing: 0.02em;
+  
+}
+.mob-address-item:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.mob-tell{
+  color: var(--IRIS, #4D5AE5);
+}
+
+.mob-soc-menu{
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
 }
 .main-section {
   padding: 72px 0;
