@@ -109,7 +109,7 @@ img {
 }
 
 .address-link {
-  color: #434455;
+  color: #434455;  
   padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
@@ -138,9 +138,10 @@ margin-left: auto;
   display: flex;
   flex-direction: column;
   overflow: auto;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: auto;
+    transform: translateX(100%);
+}
+.mob-menu:active{
+  transform: translateX(0);
 }
 .mob-menu-item a{
 color: var(--NAVY-BLUE, #2E2F42);
@@ -161,6 +162,7 @@ color: var(--OCEAN, #404BBF);
 .mob-address{  margin-top: auto;}
 
 .mob-address-item a{
+  
 color: var(--SLATE, #434455);
   font-size: 20px;
       font-weight: 500;
@@ -621,7 +623,8 @@ border-radius: 4px;}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 288px;
+  width: calc(100% - 32px);
+  max-width: 408px;
   min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
